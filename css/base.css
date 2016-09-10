@@ -52,13 +52,21 @@ html, body { height: 100%!important; margin: 0px!important; }
     text-indent: -9999px;
         background-color: #81e786;
 }
-.bg-image:after{
+.bg-image q q:after{
 	content: "Click to begin";
 }
-#navigation{
+#contact-anchor{
 	position: fixed;
     right: 0;
     z-index: 999999;
+    top: 1em;
+}
+.header-logo img{
+    background-color: #81e786;
+    border-radius: 50px;
+    position: relative;
+    left: 1em;
+    top: 0.3em;
 }
 /*img{
 
