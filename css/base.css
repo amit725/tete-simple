@@ -23,6 +23,12 @@ body{
 	font-weight: bold;
 	color: white;
 }
+.font-focus.headline{
+    font-size: 2em;
+    font-style: italic;
+    letter-spacing: .2em;
+    margin-bottom: .4em;
+}
 
 .contact-us-list{
 	list-style: none;
