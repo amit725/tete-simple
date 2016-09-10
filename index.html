@@ -27,16 +27,25 @@
     <![endif]-->
   </head>
   <body>
+   <!--  <div class="row">
+      <div class="container">
+        <div class="col-md-12">
+          <img src="images/logo.png" id="bg" alt="">
+
+        </div>
+      </div>
+    </div> -->
+        <div class="bg-image">Some text not displayed</div>
       <div class="row">
       <div id="navigation">
         <ul class="contact-us-list">
-          <li><a href="#contact"> Contact Us</a></li>
+          <li><a id="contact-anchor" href="#contact"> Contact Us</a></li>
         </ul>
       </div>
     </div>
     <div id="fullpage">
 
-    <div class="section">
+    <div class="section first-page">
       <div class="container">
         <div class="row">
           <div class="col-md-6">
@@ -45,7 +54,7 @@
   </div>
 </div>
   </div>
-    <div class="section">
+    <div class="section second-page">
       <div class="container">
         <div class="row">
           <div class="col-md-8">
@@ -54,7 +63,7 @@
   </div>
   </div>
   </div>
-    <div class="section">
+    <div class="section third-page">
       <div class="container">
         <div class="row">
           <div class="col-md-9">
@@ -64,7 +73,7 @@
       </div>
   </div>
   </div>
-    <div class="section" id="contact">
+    <div class="section fourth-page" id="contact">
       <div class="container">
           <div class="row">
           <div class="col-md-4">
@@ -79,7 +88,32 @@
 <script>
 $(document).ready(function() {
 
-    $('#fullpage').fullpage();
+    $('#fullpage').fullpage({
+        anchors: ['page1', 'page2', 'page3', 'lastpage']
+
+    });
+      $.fn.fullpage.setAllowScrolling(false);
+      $.fn.fullpage.setLockAnchors(true);
+
+
+    $('body').on("click", function(){
+            $.fn.fullpage.setAllowScrolling(true);
+
+      $('.bg-image').hide("slow");
+    });
+    $('#contact-anchor').on("click", function(){
+      $.fn.fullpage.moveTo("lastpage");
+
+    });
+
+//       $(document).on('click', 'a', function(){
+//           $.fn.fullpage.setLockAnchors(true);
+
+//  $.fn.fullpage.moveTo(2);
+// });
+//     $(document).on( 'scroll', '.section', function(){
+//     console.log('Event Fired');
+// });
     // handle links with @href started with '#' only
   var hash = location.hash.replace('#','');
 
