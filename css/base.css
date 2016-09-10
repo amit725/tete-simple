@@ -7,9 +7,9 @@
 body{
 	font-family: "MyWebFont", sans-serif;
 	height: 172px;
-    font-weight: bolder;
-    font-size: 5em;
-    color: white;
+    font-weight: normal;
+    font-size: 3.1em;
+    color: #e2e2e2;
     letter-spacing: .1em;
     background: url(../images/bg.jpg) no-repeat center center fixed; 
   -webkit-background-size: cover;
@@ -17,3 +17,27 @@ body{
   -o-background-size: cover;
   background-size: cover;
 }
+
+.font-focus{
+	font-size: 1.3em;
+	font-weight: bold;
+	color: white;
+}
+
+.contact-us-list{
+	list-style: none;
+	text-decoration: none;
+}
+.contact-us-list a{
+	color: #00eeff;
+	position: relative;
+	float: right;
+    margin-right: 2em;
+    font-size: large;
+}
+.contact-us-list a:hover{
+	text-decoration: none;
+	opacity: 0.5;
+	
+}
+
