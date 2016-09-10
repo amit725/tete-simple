@@ -62,7 +62,7 @@ html, body { height: 100%!important; margin: 0px!important; }
 	position: fixed;
     right: 0;
     z-index: 999999;
-    top: 1em;
+    top: 1.5em;
 }
 .header-logo img{
 
@@ -95,5 +95,8 @@ h3.text-muted{
   #error p{
     color: #aa0707;
     background-color: #959595!important;
+  }
+  .lastpage .section-heading, .lastpage .section-subheading{
+    margin-bottom: 1.5em; 
   }
 
