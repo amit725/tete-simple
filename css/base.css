@@ -8,7 +8,7 @@ body{
 	font-family: "MyWebFont", sans-serif;
 	height: 172px;
     font-weight: normal;
-    font-size: 2.5em;
+    font-size: 2.0em;
     color: #e2e2e2;
     letter-spacing: .1em;
     background: url(../images/bg.jpg) no-repeat center center fixed; 
@@ -27,7 +27,7 @@ body{
     font-size: 1.4em;
     font-style: italic;
     letter-spacing: .2em;
-    margin-bottom: .4em;
+    margin-bottom: 1em;
 }
 
 .contact-us-list{
