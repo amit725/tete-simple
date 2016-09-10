@@ -143,8 +143,8 @@
       var initialLoad = true;
 
       $('.bg-image').on("touchstart, tap, click", function(){
-            $('#navigation').show(1500);
             $('#navigation').removeClass("hidden");
+            $('#navigation').show(1500);
             $.fn.fullpage.setAllowScrolling(true);
             $('.bg-image').hide("slow");
       });
