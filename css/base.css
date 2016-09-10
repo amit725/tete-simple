@@ -71,6 +71,7 @@ html, body { height: 100%!important; margin: 0px!important; }
     top: 0.3em;
     width: 20%;
     height: 10%;
+    min-width: 100px;
 }
 #contactForm button{
   color: black;
