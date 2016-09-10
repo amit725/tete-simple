@@ -77,16 +77,16 @@ h3.text-muted{
   color: white;
   font-size: large;
 }
-/*img{
+#success, #error{
+  margin: 10px;
+}
+#success p, #error p{
+    font-size: larger;
+    background-color: darkslateblue;
+    padding: 10px;
+  }
+  #error p{
+    color: #aa0707;
+    background-color: #959595!important;
+  }
 
-    position: absolute;
-    margin: auto;
-    left: 0; 
-    right: 0;
-    top: 0;
-    bottom: 0;  
-}*/
-
-/*#bg { position: fixed; top: 0; left: 0; }
-.bgwidth { width: 100%; }
-.bgheight { height: 100%; }*/

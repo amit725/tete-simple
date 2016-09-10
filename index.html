@@ -19,7 +19,16 @@
           <link href="css/base.css" rel="stylesheet">
 
   <script type="text/javascript" src="js/jquery.fullpage.min.js"></script>
+  <script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+<script type="text/javascript" src="https://cdn.emailjs.com/dist/email.min.js"></script>
+
+<script type="text/javascript">
+   (function(){
+      emailjs.init("user_b8eNo5sY47wAOhLkwTQsB");
+   })();
+</script>
   <link rel="stylesheet" href="css/jquery.fullpage.min.css" />
+<script src='https://www.google.com/recaptcha/api.js'></script>
 
     </head>
     <body>
@@ -74,7 +83,7 @@
               </div>
               <div class="row">
                   <div class="col-lg-12">
-                      <form name="sentMessage" id="contactForm" novalidate="" _lpchecked="1">
+                      <form name="sentMessage" id="contactForm" novalidate>
                           <div class="row">
                               <div class="col-md-6">
                                   <div class="form-group">
@@ -98,9 +107,17 @@
                               </div>
                               <div class="clearfix"></div>
                               <div class="col-lg-12 text-center">
-                                  <div id="success"></div>
                                   <button type="submit" class="btn btn-xl">Send Message</button>
                               </div>
+                              <!-- <div class="g-recaptcha" data-sitekey="6Lf30SkTAAAAAO9OTCZMsw9KrBm53JGbFcYvNqBR"></div> -->
+                                <div id="success" class="hidden">
+                                    <div class=""><p><strong>Your message has been sent!</p></strong>
+                                    </div>
+                                  </div>
+                                  <div id="error" class="hidden">
+                                    <div class=""><p><strong>There was an error sending message, please try again.</p></strong>
+                                    </div>
+                                  </div>
                           </div>
                       </form>
                   </div>
@@ -110,81 +127,7 @@
 
   </div>
 
-  <script>
-  $(document).ready(function() {
-
-      $('#fullpage').fullpage({
-          fadingEffect: true,
-          loopBottom: true,
-          keyboardScrolling: false,
-            anchors: ['firstPage', 'secondPage', 'thirdPage', 'lastpage'],
-
-           onLeave: function(index, nextIndex, direction){
-            var leavingSection = $(this);
-
-            //after leaving section 2
-            if(index == 3 && direction =='down'){
-                        $('.contact-us-list').hide();
-
-                console.log("coming section 4!");
-            }
-
-            else if((index == 4 && direction == 'up') || (index == 4 && direction == 'down')){
-                console.log("Going to section 1 or 3!");
-                          $('.contact-us-list').show();
-
-            }
-        }
-      });
-
-      $.fn.fullpage.setAllowScrolling(false);
-      $.fn.fullpage.setLockAnchors(true);
-
-      var initialLoad = true;
-
-      $('.bg-image').on("touchstart, tap, click", function(){
-            $('#navigation').removeClass("hidden");
-            $('#navigation').show(1500);
-            $.fn.fullpage.setAllowScrolling(true);
-            $('.bg-image').hide("slow");
-      });
-
-       $('body').keydown(function(e){
-            $('.bg-image').click();
-            if(initialLoad){
-                e.stopImmediatePropagation();
-                initialLoad = false;
-            }
-            $.fn.fullpage.setKeyboardScrolling(true);
-       });
-
-      $('#contact-anchor').on("click", function(e){
-          $('.contact-us-list').hide();
-          $('.header-logo').show();
-          $('#navigation').show();
-                  $.fn.fullpage.moveTo(4);
-
-      });
-
-      $('.header-logo').on("click", function(){
-        $.fn.fullpage.moveTo(1);
-      });
-
-    $(document).scroll(function(){
-        console.log('Event Fired');
-});
-    var removeHash = function(){
-      var hash = location.hash.replace('#','');
-
-      if(hash != ''){
-
-          location.hash = '';
-      }
-    };
-        removeHash();
-
-    
-  });
-  </script>
+ 
+       <script  type="text/javascript" src="js/app.js"></script>
   </body>
   </html>
