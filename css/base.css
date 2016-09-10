@@ -51,9 +51,7 @@ html, body { height: 100%!important; margin: 0px!important; }
   background-size: contain;
   text-indent: -9999px; 
 }
-.bg-image:after{
-	content: "Click to begin";
-}
+
 #contact-anchor{
 	position: fixed;
     right: 0;
@@ -62,7 +60,7 @@ html, body { height: 100%!important; margin: 0px!important; }
 }
 .header-logo img{
 
-    position: relative;
+    position: fixed;
     left: 1em;
     top: 0.3em;
     width: 20%;
@@ -70,6 +68,10 @@ html, body { height: 100%!important; margin: 0px!important; }
 }
 #contactForm button{
   color: black;
+}
+#contactForm .btn{
+  border: 1px solid #000000;
+  background-color: darkseagreen;
 }
 h3.text-muted{
   color: white;
