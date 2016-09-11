@@ -96,4 +96,11 @@ h3.text-muted{
     margin-bottom: 1.5em; 
     color: white;
   }
+  .address{
+    float: right;
+    font-size: .5em;
+    position: fixed;
+    top: 50px;
+    right: 15px;
+  }
 
