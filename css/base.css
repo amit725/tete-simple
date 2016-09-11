@@ -24,7 +24,7 @@ body{
 	color: white;
 }
 .font-focus.headline{
-    font-size: 1.4em;
+    font-size: 1.7em;
     font-style: italic;
     letter-spacing: .2em;
     margin-bottom: 1em;
@@ -89,14 +89,11 @@ h3.text-muted{
 }
 #success p, #error p{
     font-size: larger;
-    background-color: darkslateblue;
     padding: 10px;
   }
-  #error p{
-    color: #aa0707;
-    background-color: #959595!important;
-  }
+
   .lastpage .section-heading, .lastpage .section-subheading{
     margin-bottom: 1.5em; 
+    color: white;
   }
 
